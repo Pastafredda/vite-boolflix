@@ -1,16 +1,9 @@
 <script>
-import ListMovies from './ListMovies.vue'
-
 export default {
-    components: {
-        ListMovies
-    },
     name: 'Main'
 }
 </script>
 
-<template>
-    <ListMovies />
-</template>
+<template></template>
 
 <style scoped></style>

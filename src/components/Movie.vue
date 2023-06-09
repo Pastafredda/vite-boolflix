@@ -1,9 +1,23 @@
 <script>
 export default {
-    name: 'Movie'
+    name: 'Movie',
+    props: {
+        details: Object
+    }
 }
 </script>
 
-<template></template>
+<template>
+    <ul class="movie">
+        <li>{{ details.title }}</li>
+        <li>{{ details.original_title }}</li>
+        <li>{{ details.original_language }}</li>
+        <li>{{ details.vote_average }}</li>
+    </ul>
+</template>
 
-<style scoped></style>
+<style scoped>
+.movie {
+    padding: 20px;
+}
+</style>
