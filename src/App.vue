@@ -18,9 +18,15 @@ export default {
     },
     methods: {
         getMovies() {
-            axios.get(store.apiUrl)
+            let myUrl = store.apiUrl
+            if (store.searchText !== '') {
+                myUrl += `&${store.apiParameter}=${store.searchText}`
+
+            }
+            axios.get(myUrl)
                 .then(res => {
                     store.movieList = res.data.results;
+
                 })
                 .catch(err => {
                     console.log(err);
@@ -34,7 +40,7 @@ export default {
 </script>
 
 <template>
-    <Header />
+    <Header @mysearch="getMovies" />
     <ListMovies />
     <Main />
 </template>
