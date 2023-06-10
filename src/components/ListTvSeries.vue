@@ -1,11 +1,11 @@
 <script>
-import Movie from './Movie.vue';
+import TvSeries from './TvSeries.vue'
 import { store } from '../store.js';
 
 export default {
-    name: 'ListMovies',
+    name: 'ListTvSeries',
     components: {
-        Movie,
+        TvSeries
     },
     data() {
         return {
@@ -17,9 +17,9 @@ export default {
 </script>
 
 <template>
-    <h2>FILM</h2>
+    <h2>TV SERIES</h2>
     <div class="container">
-        <Movie v-for="movie in store.movieList" :details="movie" />
+        <TvSeries v-for="series in store.tvSeriesList" :details="series" />
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'Movie',
+    name: 'TvSeries',
     props: {
         details: Object
     }
@@ -8,16 +8,16 @@ export default {
 </script>
 
 <template>
-    <ul class="movie">
-        <li>{{ details.title }}</li>
-        <li>{{ details.original_title }}</li>
+    <ul class="series">
+        <li>{{ details.name }}</li>
+        <li>{{ details.original_name }}</li>
         <li>{{ details.original_language }}</li>
         <li>{{ details.vote_average }}</li>
     </ul>
 </template>
 
 <style scoped>
-.movie {
+.series {
     padding: 20px;
     border: 1px solid black;
 }
